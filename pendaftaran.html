@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran</title>
+    <style>
+        /* CSS Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            width: 150px;
+            height: 100px;
+            margin-right: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .container {
+            margin: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="checkbox"] {
+            margin-bottom: 5px;
+        }
+        .btn-group {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        .btn-cancel {
+            background-color: #f44336;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="Logo1.png" alt="Logo">
+            <h1>Website UKM Universitas Pamulang</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Profile</a></li>
+                <li><a href="gallery.html">Gallery Kegiatan</a></li>
+                <li><a href="pendaftaran.html">Pendaftaran</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h2 align="center">Form Pendaftaran UKM</h2>
+    <form action="#" method="POST">
+        <label for="nim">NIM:</label>
+        <input type="text" id="nim" name="nim" required>
+        
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" name="nama" required>
+        
+        <label for="jenis_kelamin">Jenis Kelamin:</label>
+        <select id="jenis_kelamin" name="jenis_kelamin" required>
+            <option value="">Pilih Jenis Kelamin</option>
+            <option value="Laki-laki">Laki-laki</option>
+            <option value="Perempuan">Perempuan</option>
+        </select>
+        
+        <label for="program_studi">Program Studi:</label>
+        <input type="text" id="program_studi" name="program_studi" required>
+        
+        <label for="ukm">UKM yang akan diikuti:</label>
+        <select id="ukm" name="ukm" required>
+            <option value="">Pilih UKM</option>
+            <option value="UKM Musik">UKM Musik</option>
+            <option value="UKM Teater">UKM Teater</option>
+            <option value="UKM Olahraga">UKM Olahraga</option>
+            <option value="UKM Seni Budaya">UKM Seni Budaya</option>
+        </select>
+        
+        <label for="hari_kegiatan">Pilihan hari kegiatan:</label><br>
+        <input type="checkbox" id="senin" name="hari_kegiatan[]" value="Senin">
+        <label for="senin">Senin</label><br>
+        <input type="checkbox" id="selasa" name="hari_kegiatan[]" value="Selasa">
+        <label for="selasa">Selasa</label><br>
+        <input type="checkbox" id="rabu" name="hari_kegiatan[]" value="Rabu">
+        <label for="rabu">Rabu</label><br>
+        <input type="checkbox" id="kamis" name="hari_kegiatan[]" value="Kamis">
+        <label for="kamis">Kamis</label><br>
+        <input type="checkbox" id="jumat" name="hari_kegiatan[]" value="Jumat">
+        <label for="jumat">Jumat</label><br>
+        
+        <div class="btn-group">
+            <button type="submit" class="btn">Simpan</button>
+            <button type="button" class="btn btn-cancel">Batal</button>
+        </div>
+    </form>
+    <br><br><br><br>
+    <footer>
+        <p>&copy; 2024 Website Kreatifitas Mahasiswa Universitas Pamulang. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
